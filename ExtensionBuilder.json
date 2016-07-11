@@ -1,0 +1,139 @@
+{
+    "modules": [
+        {
+            "config": {
+                "position": [
+                    79,
+                    69
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": true,
+                    "_default1_show": true,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": []
+                },
+                "name": "Socialpublisher",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "1392889208724"
+                },
+                "propertyGroup": {
+                    "properties": []
+                },
+                "relationGroup": {
+                    "relations": [
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "",
+                            "relationName": "facebookpage",
+                            "relationType": "zeroToOne",
+                            "relationWire": "",
+                            "uid": "1351578067718"
+                        },
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "",
+                            "relationName": "twitterpage",
+                            "relationType": "zeroToOne",
+                            "relationWire": "",
+                            "uid": "924268633751"
+                        },
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "",
+                            "relationName": "linkedinpage",
+                            "relationType": "zeroToOne",
+                            "relationWire": "",
+                            "uid": "990108101195"
+                        },
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "",
+                            "relationName": "xingpage",
+                            "relationType": "zeroToOne",
+                            "relationWire": "",
+                            "uid": "1272856946379"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "properties": {
+        "backendModules": [
+            {
+                "actions": {
+                    "controllerActionCombinations": ""
+                },
+                "description": "Enter social media details here",
+                "key": "socialpublisher",
+                "mainModule": "web",
+                "name": "Social Publisher",
+                "tabLabel": "Social Publisher"
+            }
+        ],
+        "description": "Publish contents to social media ",
+        "emConf": {
+            "category": "plugin",
+            "custom_category": "",
+            "dependsOn": "typo3 => 6.2.0-7.6.99\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": false,
+            "sourceLanguage": "en",
+            "state": "alpha",
+            "version": "0.0.1"
+        },
+        "extensionKey": "social_publisher",
+        "name": "Social Publisher",
+        "originalExtensionKey": "",
+        "persons": [
+            {
+                "company": "PIT Solutions",
+                "email": "siju.er@pitsolutions.com",
+                "name": "Siju E Raju",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [
+            {
+                "actions": {
+                    "controllerActionCombinations": "",
+                    "noncacheableActions": "",
+                    "switchableActions": ""
+                },
+                "key": "socialpublisher",
+                "name": "Social Publisher"
+            }
+        ],
+        "vendorName": "PITSolutions"
+    },
+    "wires": [],
+    "log": {
+        "last_modified": "2016-06-14 08:04",
+        "extension_builder_version": "6.2",
+        "be_user": " (1)"
+    }
+}

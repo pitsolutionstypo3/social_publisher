@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-06-14T08:04:19Z" product-name="social_publisher">
+		<header/>
+		<body>
+			<trans-unit id="facebookpage.description">
+				<source>facebookpage</source>
+			</trans-unit>
+			<trans-unit id="twitterpage.description">
+				<source>twitterpage</source>
+			</trans-unit>
+			<trans-unit id="linkedinpage.description">
+				<source>linkedinpage</source>
+			</trans-unit>
+			<trans-unit id="xingpage.description">
+				<source>xingpage</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

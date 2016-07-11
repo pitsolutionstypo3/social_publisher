@@ -1,0 +1,147 @@
+<?php
+if (!defined('TYPO3_MODE')) {
+        die ('Access denied.');
+}
+
+/*$GLOBALS['TCA']['pages']['palettes']['social'] = array(
+  'showitem' => 'header;Social,
+         --linebreak--, subheader;Social Share,
+         --linebreak--, header_link;abc',
+  'canNotCollapse' => 1
+);*/
+
+/*$GLOBALS['TCA']['pages']['palettes']['introheader'] = array(
+  'showitem' => 'header;Social,
+         --linebreak--, subheader;LLL:Socalshare,
+         --linebreak--, header_link;LLL:bbb',
+  'canNotCollapse' => 1
+);*/
+
+/*$TCA['pages']['types']['tx_newkey']['showitem'] = '--div--;Social Media Buttons,type,language,--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.access,--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.visibility;visibility';
+
+*/
+
+$GLOBALS['TCA']['pages']['palettes']['introheader'] = array(
+  'showitem' => 'header;Social,
+         --linebreak--, subheader;LLL:Socalshare,
+         --linebreak--, header_link;LLL:bbb',
+  'canNotCollapse' => 1
+);
+
+
+
+$temporaryColumns = array (
+        
+        'tx_socialpublisher_disable_facebook' => array (
+                'exclude' => 0,
+                'label' => 'LLL:EXT:social_publisher/Resources/Private/Language/locallang_db.xlf:pages.tx_socialpublisher_disable_facebook',
+                'config' => array (
+                        'type' => 'check',
+                                        
+                        
+                )
+        ),
+        'tx_socialpublisher_disable_twitter' => array (
+                'exclude' => 0,
+                'label' => 'LLL:EXT:social_publisher/Resources/Private/Language/locallang_db.xlf:pages.tx_socialpublisher_disable_twitter',
+                'config' => array (
+                        'type' => 'check',
+                                           
+                        
+                )
+        ),
+
+        'tx_socialpublisher_disable_gplus' => array (
+                'exclude' => 0,
+                'label' => 'LLL:EXT:social_publisher/Resources/Private/Language/locallang_db.xlf:pages.tx_socialpublisher_disable_gplus',
+                'config' => array (
+                        'type' => 'check',
+                                           
+                        
+                )
+        ),
+
+        'tx_socialpublisher_disable_linkedin' => array (
+                'exclude' => 0,
+                'label' => 'LLL:EXT:social_publisher/Resources/Private/Language/locallang_db.xlf:pages.tx_socialpublisher_disable_linkedin',
+                'config' => array (
+                        'type' => 'check',
+                                           
+                        
+                )
+        ),
+
+        'tx_socialpublisher_disable_xing' => array (
+                'exclude' => 0,
+                'label' => 'LLL:EXT:social_publisher/Resources/Private/Language/locallang_db.xlf:pages.tx_socialpublisher_disable_xing',
+                'config' => array (
+                        'type' => 'check',
+                                           
+                        
+                )
+        ),
+
+        'tx_socialpublisher_publish' => array(
+                'label' => 'LLL:EXT:social_publisher/Resources/Private/Language/locallang_db.xlf:pages.tx_socialpublisher_publish',
+                'config' => array(
+                        'type' => 'user',
+                        'userFunc' => 'PITSolutions\SocialPublisher\Utility\Publish->render',
+                        'parameters' => array(
+                                'latitude' => 'lat',
+                                 'longitude' => 'lng',
+                                ),
+                 ),
+        ),
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
+        'pages',
+        $temporaryColumns
+);
+/*\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+        'pages',
+        'tx_socialpublisher_disable_facebook, tx_socialpublisher_disable_twitter, tx_socialpublisher_disable_gplus, tx_socialpublisher_disable_linkedin, tx_socialpublisher_disable_xing'
+);*/
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+        'pages',
+        'title',
+        '--linebreak--,tx_socialpublisher_disable_facebook',
+        'after:subtitle'
+        
+);
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+        'pages',
+        'title',
+        '--linebreak--,tx_socialpublisher_disable_twitter',
+        'after:tx_socialpublisher_disable_facebook'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+        'pages',
+        'title',
+        '--linebreak--,tx_socialpublisher_disable_gplus',
+        'after:tx_socialpublisher_disable_twitter'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+        'pages',
+        'title',
+        '--linebreak--,tx_socialpublisher_disable_linkedin',
+        'after:tx_socialpublisher_disable_gplus'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+        'pages',
+        'title',
+        '--linebreak--,tx_socialpublisher_disable_xing',
+        'after:tx_socialpublisher_disable_linkedin'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+        'pages',
+        'title',
+        '--linebreak--,tx_socialpublisher_publish',
+        'after:tx_socialpublisher_disable_xing'
+);
+
+

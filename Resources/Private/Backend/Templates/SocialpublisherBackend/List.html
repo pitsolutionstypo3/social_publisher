@@ -1,0 +1,355 @@
+
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+<h3><f:translate key="tx_socialpublisher_domain_model_socialpublisher.social_control" /></h3>
+
+
+<f:flashMessages />
+
+
+
+<f:form action="list" enctype="multipart/form-data" method="post" class="socail_settings" name="socail_settings" object="{socail_settings}" >
+<f:form.hidden property="settings_uid" value="{socialpublishers.uid}" />
+
+<h4><f:translate key="tx_socialpublisher_domain_model_socialpublisher.social_settings" /></h4>
+
+<!--  Settings section !-->
+
+<div class="row">	
+	<f:form.checkbox property="social_settings_facebook" id="social_settings_facebook" checked="{socialpublishers.social_settings_facebook}" value="1" />
+	<label for="facebook">	
+	<f:translate key="tx_socialpublisher_domain_model_socialpublisher.facebook" />
+	</label>
+</div>
+
+<div class="row">	
+	<f:form.checkbox property="social_settings_twitter" id="social_settings_twitter" checked="{socialpublishers.social_settings_twitter}" value="1" />
+	<label for="twitter">	
+	<f:translate key="tx_socialpublisher_domain_model_socialpublisher.twitter" />
+	</label>
+</div>
+
+<div class="row">	
+	<f:form.checkbox property="social_settings_linkedin" id="social_settings_linkedin" checked="{socialpublishers.social_settings_linkedin}" value="1" />
+	<label for="linkedin">	
+	<f:translate key="tx_socialpublisher_domain_model_socialpublisher.linkedin" />
+	</label>
+</div>
+
+<!-- <div class="row">	
+	<f:form.checkbox property="social_settings_gplus" checked="{socialpublishers.social_settings_gplus}" value="1" />
+	<label for="gplus">	
+	<f:translate key="tx_socialpublisher_domain_model_socialpublisher.gplus" />
+	</label>
+</div> !-->
+
+<div class="row">	
+	<f:form.checkbox property="social_settings_xing" id="social_settings_xing" checked="{socialpublishers.social_settings_xing}" value="1" />
+	<label for="xing">	
+	<f:translate key="tx_socialpublisher_domain_model_socialpublisher.xing" />
+	</label>
+</div>
+
+
+<!--  Settings section Ends !-->
+<h4><f:translate key="tx_socialpublisher_domain_model_socialpublisher.account_activation_settings" /></h4>
+<!-- Tab Start-->
+<div id="social_share_tab" class="row">
+  <ul class="tabs-menu">
+    <li class="current"><a href="#facebook_tab"><f:translate key="tx_socialpublisher_domain_model_socialpublisher.facebook" /></a></li>
+    <li><a href="#twitter_tab"><f:translate key="tx_socialpublisher_domain_model_socialpublisher.twitter" /></a></li>
+    <li><a href="#linkedin_tab"><f:translate key="tx_socialpublisher_domain_model_socialpublisher.linkedin" /></a></li>
+   <!-- <li><a href="#gplus_tab"><f:translate key="tx_socialpublisher_domain_model_socialpublisher.gplus" /></a></li> !-->
+    <li><a href="#xing_tab"><f:translate key="tx_socialpublisher_domain_model_socialpublisher.xing" /></a></li>
+  </ul>
+
+
+   <div class="tab">
+<!-- Facebook configuration !-->
+<div id="facebook_tab" class="tab-content">
+<div class="row">
+	<label for="facebook_appid">	
+	<f:translate key="tx_socialpublisher_domain_model_socialpublisher.facebook_appid" />
+	</label>
+	<f:form.textfield property="facebook_appid" id="facebook_appid"  value="{socialpublishers.facebook_appid}"/>
+</div>
+<div class="row">
+	<label for="facebook_appsecret">
+	<f:translate key="tx_socialpublisher_domain_model_socialpublisher.facebook_appsecret" />
+	</label>
+	<f:form.textfield property="facebook_appsecret" id="facebook_appsecret" value="{socialpublishers.facebook_appsecret}" />
+</div>
+
+<div class="row">
+	<label for="facebook_accesstoken">
+	<f:translate key="tx_socialpublisher_domain_model_socialpublisher.facebook_accesstoken" />
+	</label>
+	<f:form.textfield property="facebook_accesstoken" id="facebook_accesstoken" value="{socialpublishers.facebook_accesstoken}" />
+</div>
+<div class="row">
+<label for="facebook_message">
+	<f:translate key="tx_socialpublisher_domain_model_socialpublisher.facebook_message" />
+	</label>	
+	<f:form.textarea rows="4" cols="50" property="facebook_message" value="{socialpublishers.facebook_message}" />
+	<f:link.external uri="javascript:void(0)" id="show_format"><f:translate key="tx_socialpublisher_domain_model_socialpublisher.common_formatinfo" /></f:link.external>
+
+	<div class="" id="format_info">
+	<span> ##SITENAME## - Inserts the site name, ##TITLE## - Inserts the Title of the page, ##URL## - Inserts the URL of the page, ##DESCRIPTION## - Inserts the meta description of the page </span>
+	
+	</div>
+
+</div>
+<div class="row">
+<label for="facebook_verify"><f:translate key="tx_socialpublisher_domain_model_socialpublisher.common_verify" />
+</label>
+<f:form.button type="button" onclick="testFacebook()"><f:translate key="tx_socialpublisher_domain_model_socialpublisher.facebook_button" /></f:form.button>
+</div>
+<div class="row">
+	<div id="facebook_success" class="success"></div>
+	<div id="facebook_error" class="error"></div>
+</div>
+
+</div>
+<!-- Facebook configuration Ends !-->
+
+
+<!-- Twitter configuration !-->
+<div id="twitter_tab" class="tab-content">
+<div class="row">
+	<label for="twitter_consumer_key">	
+	<f:translate key="tx_socialpublisher_domain_model_socialpublisher.twitter_consumer_key" />
+	</label>
+	<f:form.textfield property="twitter_consumer_key" id="twitter_consumer_key"  value="{socialpublishers.twitter_consumer_key}"/>
+</div>
+<div class="row">
+	<label for="twitter_consumer_secret">
+	<f:translate key="tx_socialpublisher_domain_model_socialpublisher.twitter_consumer_secret" />
+	</label>
+	<f:form.textfield property="twitter_consumer_secret" id="twitter_consumer_secret" value="{socialpublishers.twitter_consumer_secret}" />
+</div>
+
+<div class="row">
+	<label for="twitter_access_token">
+	<f:translate key="tx_socialpublisher_domain_model_socialpublisher.twitter_access_token" />
+	</label>
+	<f:form.textfield property="twitter_access_token" id="twitter_access_token" value="{socialpublishers.twitter_access_token}" />
+</div>
+
+<div class="row">
+	<label for="twitter_access_token_secret">
+	<f:translate key="tx_socialpublisher_domain_model_socialpublisher.twitter_access_token_secret" />
+	</label>
+	<f:form.textfield property="twitter_access_token_secret" id="twitter_access_token_secret" value="{socialpublishers.twitter_access_token_secret}" />
+</div>
+
+
+<div class="row">
+<label for="twitter_message">
+	<f:translate key="tx_socialpublisher_domain_model_socialpublisher.twitter_message" />
+	</label>	
+	<f:form.textarea rows="4" cols="50" property="twitter_message" value="{socialpublishers.twitter_message}" />
+	<f:link.external uri="javascript:void(0)" id="show_format_twitter"><f:translate key="tx_socialpublisher_domain_model_socialpublisher.common_formatinfo" /></f:link.external>
+
+	<div class="" id="format_info_twitter">
+	<span> ##SITENAME## - Inserts the site name, ##TITLE## - Inserts the Title of the page, ##DESCRIPTION## - Inserts the meta description of the page </span>
+	
+	</div>
+
+</div>
+
+
+<div class="row">
+<label for="twitter_verify"><f:translate key="tx_socialpublisher_domain_model_socialpublisher.common_verify" />
+</label>
+<f:form.button type="button" onclick="testTwitter()"><f:translate key="tx_socialpublisher_domain_model_socialpublisher.twitter_button" /></f:form.button>
+</div>
+<div class="row">
+	<div id="twitter_success" class="success"></div>
+	<div id="twitter_error" class="error"></div>
+</div>
+
+</div>
+
+<!-- Twitter configuration End !-->
+
+
+<!-- Linedin configuration !-->
+<div id="linkedin_tab" class="tab-content">
+	<div class="row">
+	<label for="linkedin_consumer_key">	
+	<f:translate key="tx_socialpublisher_domain_model_socialpublisher.linkedin_consumer_key" />
+	</label>
+	<f:form.textfield property="linkedin_consumer_key" id="linkedin_consumer_key"  value="{socialpublishers.linkedin_consumer_key}"/>
+</div>
+<div class="row">
+	<label for="linkedin_consumer_secret">
+	<f:translate key="tx_socialpublisher_domain_model_socialpublisher.linkedin_consumer_secret" />
+	</label>
+	<f:form.textfield property="linkedin_consumer_secret" id="linkedin_consumer_secret" value="{socialpublishers.linkedin_consumer_secret}" />
+</div>
+
+<!-- <div class="row">
+	<label for="linkedin_callback_url">
+	<f:translate key="tx_socialpublisher_domain_model_socialpublisher.linkedin_callback_url" />
+	</label>
+	<f:form.textfield property="linkedin_callback_url" value="{socialpublishers.linkedin_callback_url}" />
+</div> !-->
+
+<div class="row">
+	<label for="linkedin_pageid">
+	<f:translate key="tx_socialpublisher_domain_model_socialpublisher.linkedin_pageid" />
+	</label>
+	<f:form.textfield property="linkedin_pageid" id="linkedin_pageid" value="{socialpublishers.linkedin_pageid}" />
+</div>
+
+<div class="row">
+	<label for="linkedin_accesstoken">
+	<f:translate key="tx_socialpublisher_domain_model_socialpublisher.linkedin_accesstoken" />
+	</label>
+	<f:form.textfield property="linkedin_accesstoken" readonly="NULL" id="linkedin_accesstoken" value="{socialpublishers.linkedin_accesstoken}" />
+<f:form.hidden property="linkedin_accesstoken_link" id="linkedin_accesstoken_link" value="{f:uri.resource(path:'files/link.php')}" />
+
+<f:link.external uri="javascript:void(0)" id="get_accesstoken_linkedin"><f:translate key="tx_socialpublisher_domain_model_socialpublisher.common_getaccesstoken" /></f:link.external>
+</div>
+<!-- <div class="row">
+<span>(Add this link as Authorized Redirect URLs in linkedin app  http://yoursite.com{f:uri.resource(path:'files/link.php')})</span>
+</div> -->
+
+
+<div class="row">
+<label for="linkedin_message">
+	<f:translate key="tx_socialpublisher_domain_model_socialpublisher.linkedin_message" />
+	</label>	
+	<f:form.textarea rows="4" cols="50" property="linkedin_message" value="{socialpublishers.linkedin_message}" />
+	<f:link.external uri="javascript:void(0)" id="show_format_linkedin"><f:translate key="tx_socialpublisher_domain_model_socialpublisher.common_formatinfo" /></f:link.external>
+
+	<div class="" id="format_info_linkedin">
+	<span> ##SITENAME## - Inserts the site name, ##TITLE## - Inserts the Title of the page, ##URL## - Inserts the URL of the page, ##DESCRIPTION## - Inserts the meta description of the page </span>
+	
+	</div>
+
+</div>
+
+<div class="row">
+<label for="linkedin_verify"><f:translate key="tx_socialpublisher_domain_model_socialpublisher.common_verify" />
+</label>
+<f:form.button type="button" onclick="testLinkedin()"><f:translate key="tx_socialpublisher_domain_model_socialpublisher.linkedin_button" /></f:form.button>
+</div>
+<div class="row">
+	<div id="linkedin_success" class="success"></div>
+	<div id="linkedin_error" class="error"></div>
+</div>
+
+
+
+</div>
+
+<!-- Linkedin  configuration End !-->
+
+<!-- Google plus configuration !-->
+<!-- <div id="gplus_tab" class="tab-content">Gplus</div> !-->
+
+<!-- Google plus  configuration End !-->
+
+<!-- Xing  configuration !-->
+<div id="xing_tab" class="tab-content">
+	
+
+<div class="row">
+	<label for="xing_consumer_key">	
+	<f:translate key="tx_socialpublisher_domain_model_socialpublisher.xing_consumer_key" />
+	</label>
+	<f:form.textfield property="xing_consumer_key" id="xing_consumer_key"  value="{socialpublishers.xing_consumer_key}"/>
+</div>
+<div class="row">
+	<label for="xing_consumer_secret">
+	<f:translate key="tx_socialpublisher_domain_model_socialpublisher.xing_consumer_secret" />
+	</label>
+	<f:form.textfield property="xing_consumer_secret" id="xing_consumer_secret" value="{socialpublishers.xing_consumer_secret}" />
+</div>
+
+<div class="row">
+	<label for="xing_callback_url">
+	<f:translate key="tx_socialpublisher_domain_model_socialpublisher.xing_callback_url" />
+	</label>
+	<f:form.textfield property="xing_callback_url" id="xing_callback_url" value="{socialpublishers.xing_callback_url}" />
+</div>
+
+<div class="row">
+	<label for="xing_accesstoken">
+	<f:translate key="tx_socialpublisher_domain_model_socialpublisher.xing_accesstoken" />
+	</label>
+	<f:form.textfield property="xing_accesstoken" readonly="NULL" id="xing_accesstoken" value="{socialpublishers.xing_accesstoken}" />
+
+	<f:form.hidden property="xing_accesstoken_link" id="xing_accesstoken_link" value="{f:uri.resource(path:'files/xing.php')}" />
+
+	<f:form.hidden property="xing_accesstoken_secret" id="xing_accesstoken_secret" value="{socialpublishers.xing_accesstoken_secret}" />
+	<f:form.hidden property="xing_userid" id="xing_userid" value="{socialpublishers.xing_userid}" />
+
+	<f:form.hidden property="xing_usa_id_ref" id="xing_usa_id_ref" value="{socialpublishers.xing_usa_id_ref}" />
+	<f:form.hidden property="crd_array" id="crd_array" value="{socialpublishers.crd_array}" />
+
+ <f:link.external uri="javascript:void(0)" id="get_accesstoken_xing"><f:translate key="tx_socialpublisher_domain_model_socialpublisher.common_getaccesstoken" /></f:link.external> 
+
+</div>
+
+
+ 
+<div class="row">
+<label for="xing_message">
+	<f:translate key="tx_socialpublisher_domain_model_socialpublisher.xing_message" />
+	</label>	
+	<f:form.textarea rows="4" cols="50" property="xing_message" value="{socialpublishers.xing_message}" />
+	<f:link.external uri="javascript:void(0)" id="show_format_xing"><f:translate key="tx_socialpublisher_domain_model_socialpublisher.common_formatinfo" /></f:link.external>
+
+	<div class="" id="format_info_xing">
+	<span> ##SITENAME## - Inserts the site name, ##TITLE## - Inserts the Title of the page, ##DESCRIPTION## - Inserts the meta description of the page </span>
+	
+	</div>
+
+</div>
+
+
+<div class="row">
+<label for="xing_verify"><f:translate key="tx_socialpublisher_domain_model_socialpublisher.common_verify" />
+</label>
+<f:form.button type="button" onclick="testXing()"><f:translate key="tx_socialpublisher_domain_model_socialpublisher.xing_button" /></f:form.button>
+</div>
+<div class="row">
+	<div id="xing_success" class="success"></div>
+	<div id="xing_error" class="error"></div>
+</div>
+
+
+</div>
+
+<!-- Xing  configuration End !-->
+
+</div>
+
+
+</div>
+<!-- Tab End !-->
+
+
+<div class="row">	<f:form.submit value="Save" /></div>
+</f:form>
+
+
+<link rel="stylesheet" href="{f:uri.resource(path:'css/social_tab.css')}">
+<script src="{f:uri.resource(path:'js/jquery-1.12.1.js')}"></script> 
+<script src="{f:uri.resource(path:'js/social_tab.js')}"></script> 
+ 
+</f:section>

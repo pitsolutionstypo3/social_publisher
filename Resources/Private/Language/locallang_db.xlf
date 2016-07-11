@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-06-14T08:04:19Z" product-name="social_publisher">
+		<header/>
+		<body>
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher">
+				<source>Socialpublisher</source>
+			</trans-unit>
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.facebookpage">
+				<source>Facebookpage</source>
+			</trans-unit>
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.twitterpage">
+				<source>Twitterpage</source>
+			</trans-unit>
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.linkedinpage">
+				<source>Linkedinpage</source>
+			</trans-unit>
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.xingpage">
+				<source>Xingpage</source>
+			</trans-unit>
+
+			<trans-unit id="tx_socialpublisher_domain_model_log">
+				<source>Log</source>
+			</trans-unit>
+			<trans-unit id="tx_socialpublisher_domain_model_log.platform">
+				<source>Platform</source>
+			</trans-unit>
+			<trans-unit id="tx_socialpublisher_domain_model_log.response">
+				<source>Response</source>
+			</trans-unit>
+			<trans-unit id="tx_socialpublisher_domain_model_log.responsetime">
+				<source>Responsetime</source>
+			</trans-unit>
+
+
+
+	<trans-unit id="pages.tabs.socialtab">
+				<source>Social Post</source>
+			</trans-unit>
+
+			<trans-unit id="pages.palettes.dis">
+				<source>Disable</source>
+			</trans-unit>
+
+			<trans-unit id="pages.tx_socialpublisher_disable_facebook">
+				<source>Disable Facebook publish</source>
+			</trans-unit>
+
+			<trans-unit id="pages.tx_socialpublisher_disable_twitter">
+				<source>Disable Twitter publish</source>
+			</trans-unit>
+
+			<trans-unit id="pages.tx_socialpublisher_disable_gplus">
+				<source>Disable Google plus publish</source>
+			</trans-unit>
+
+			<trans-unit id="pages.tx_socialpublisher_disable_linkedin">
+				<source>Disable Linkedin publish</source>
+			</trans-unit>
+
+			<trans-unit id="pages.tx_socialpublisher_disable_xing">
+				<source>Disable Xing publish</source>
+			</trans-unit>
+
+			<trans-unit id="pages.tx_socialpublisher_publish">
+				<source>Publish</source>
+			</trans-unit>
+
+			<trans-unit id="pages.tx_socialpublisher_image">
+				<source>Image</source>
+			</trans-unit>
+
+
+
+		</body>
+	</file>
+</xliff>

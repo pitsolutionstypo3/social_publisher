@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-07-05T12:11:55Z" product-name="social_publisher">
+		<header/>
+		<body>
+			<trans-unit id="platform.description">
+				<source>platform</source>
+			</trans-unit>
+			<trans-unit id="response.description">
+				<source>response</source>
+			</trans-unit>
+			<trans-unit id="responsetime.description">
+				<source>responsetime</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

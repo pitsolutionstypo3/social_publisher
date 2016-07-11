@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-06-14T08:04:19Z" product-name="social_publisher">
+		<header/>
+		<body>
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher">
+				<source>Socialpublisher</source>
+			</trans-unit>
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.facebookpage">
+				<source>Facebookpage</source>
+			</trans-unit>
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.twitterpage">
+				<source>Twitterpage</source>
+			</trans-unit>
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.linkedinpage">
+				<source>Linkedinpage</source>
+			</trans-unit>
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.xingpage">
+				<source>Xingpage</source>
+			</trans-unit>
+
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.social_control">
+				<source>Social Media Autopost Control panel</source>
+			</trans-unit>
+
+
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.social_settings">
+				<source>Social Media Settings</source>
+			</trans-unit>
+
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.facebook">
+				<source>Facebook</source>
+			</trans-unit>
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.twitter">
+				<source>Twitter</source>
+			</trans-unit>
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.linkedin">
+				<source>LinkedIn</source>
+			</trans-unit>			
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.gplus">
+				<source>Google+</source>
+			</trans-unit>
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.xing">
+				<source>Xing</source>
+			</trans-unit>
+
+
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.account_activation_settings">
+				<source>Account Activation Settings</source>
+			</trans-unit>
+
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.facebook_appid">
+				<source>Facebook App ID</source>
+			</trans-unit>
+
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.facebook_appsecret">
+				<source>Facebook App Secret</source>
+			</trans-unit>
+
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.facebook_accesstoken">
+				<source>Facebook Access Token</source>
+			</trans-unit>
+
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.facebook_message">
+				<source>Message Text Format</source>
+			</trans-unit>
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.common_verify">
+				<source>Verify Your Settings</source>
+			</trans-unit>
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.common_formatinfo">
+				<source>Show Format Info</source>
+			</trans-unit>
+
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.facebook_button">
+				<source>Submit Test Post to Facebook</source>
+			</trans-unit>
+
+
+
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.twitter_consumer_key">
+				<source>Consumer Key</source>
+			</trans-unit>
+
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.twitter_consumer_secret">
+				<source>Consumer Secret</source>
+			</trans-unit>
+
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.twitter_access_token">
+				<source>Access Token</source>
+			</trans-unit>
+
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.twitter_access_token_secret">
+				<source>Access Token Secret</source>
+			</trans-unit>
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.twitter_message">
+				<source>Message Text Format</source>
+			</trans-unit>
+
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.twitter_button">
+				<source>Submit Test Tweet</source>
+			</trans-unit>
+
+
+
+
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.linkedin_consumer_key">
+				<source>Client ID</source>
+			</trans-unit>
+
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.linkedin_consumer_secret">
+				<source>Client Secret</source>
+			</trans-unit>
+
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.linkedin_callback_url">
+				<source>Callback url</source>
+			</trans-unit>
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.linkedin_pageid">
+				<source>Page id</source>
+			</trans-unit>
+<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.linkedin_accesstoken">
+				<source>Access Token</source>
+			</trans-unit>
+
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.linkedin_message">
+				<source>Message Text Format</source>
+			</trans-unit>
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.linkedin_button">
+				<source>Submit Test Post to Linkedin</source>
+			</trans-unit>
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.common_getaccesstoken">
+				<source>Get Access Token</source>
+			</trans-unit>
+
+
+
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.xing_consumer_key">
+				<source>Consumer Key</source>
+			</trans-unit>
+
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.xing_consumer_secret">
+				<source>Consumer Secret</source>
+			</trans-unit>
+
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.xing_callback_url">
+				<source>Callback url</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.xing_accesstoken">
+				<source>Access Token</source>
+			</trans-unit>
+
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.xing_button">
+				<source>Submit Test Post to Xing</source>
+			</trans-unit>
+
+			<trans-unit id="tx_socialpublisher_domain_model_socialpublisher.xing_message">
+				<source>Message Text Format</source>
+			</trans-unit>
+
+
+			
+
+
+
+		</body>
+	</file>
+</xliff>

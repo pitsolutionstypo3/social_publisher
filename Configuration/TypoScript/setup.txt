@@ -1,0 +1,58 @@
+
+plugin.tx_socialpublisher_socialpublisher {
+	view {
+		templateRootPath = {$plugin.tx_socialpublisher_socialpublisher.view.templateRootPath}
+		partialRootPath = {$plugin.tx_socialpublisher_socialpublisher.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_socialpublisher_socialpublisher.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_socialpublisher_socialpublisher.persistence.storagePid}
+	}
+}
+
+plugin.tx_socialpublisher._CSS_DEFAULT_STYLE (
+	textarea.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	.tx-social-publisher table {
+		border-collapse:separate;
+		border-spacing:10px;
+	}
+
+	.tx-social-publisher table th {
+		font-weight:bold;
+	}
+
+	.tx-social-publisher table td {
+		vertical-align:top;
+	}
+
+	.typo3-messages .message-error {
+		color:red;
+	}
+
+	.typo3-messages .message-ok {
+		color:green;
+	}
+
+)
+
+ # Module configuration
+#module.tx_socialpublisher_socialpublisher { Changed
+module.tx_socialpublisher_web_socialpublishersocialpublisher {
+	persistence {
+		storagePid = {$module.tx_socialpublisher_socialpublisher.persistence.storagePid}
+	}
+	view {
+		templateRootPaths.0 = {$module.tx_socialpublisher_socialpublisher.view.templateRootPath}
+		partialRootPaths.0 = {$module.tx_socialpublisher_socialpublisher.view.partialRootPath}
+		layoutRootPaths.0 = {$module.tx_socialpublisher_socialpublisher.view.layoutRootPath}
+	}
+}
